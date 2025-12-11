@@ -1,0 +1,60 @@
+---
+
+---
+
+<footer>
+  <section>
+    <h2>Kontakt</h2>
+    <p>Tlf: +45 30 95 03 54</p>
+    <p>Mail: <br /> camillaprivato@gmail.com</p>
+  </section>
+  <section>
+    <h2>Åbningstider</h2>
+    <p>Man-tors 8:00-17:00</p>
+    <p>Weekend Lukket</p>
+  </section>
+  <section>
+    <h2>Følg os her:</h2>
+    <div class="some-logos">
+      <a href="https://www.instagram.com/konaktepe_nails/" target="_blank"> <img src="public/insta_logo.png" alt="Instagram logo" /></a>
+      <a href="https://www.facebook.com/konaktepenails/?locale=da_DK" target="_blank"> <img src="/public/fb_logo.png" alt="Facebook logo" /></a>
+    </div>
+  </section>
+</footer>
+
+<style>
+  footer {
+    background-color: rgba(57, 39, 29, 1);
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  footer section {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  .some-logos {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .some-logos img {
+    height: 40px;
+    width: auto;
+  }
+  @media (max-width: 768px) {
+    footer {
+      grid-template-columns: 1fr;
+      text-align: center;
+    }
+    footer section {
+      padding: 2rem 1rem;
+    }
+  }
+</style>
