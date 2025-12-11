@@ -7,7 +7,7 @@
     <section>
       <h2>Kontakt</h2>
       <p>Tlf: +45 30 95 03 54</p>
-      <p>Mail: <br /> camillaprivato@gmail.com</p>
+      <p>Mail: camillaprivato@gmail.com</p>
     </section>
     <section>
       <h2>Åbningstider</h2>
@@ -20,6 +20,7 @@
         <a href="https://www.instagram.com/konaktepe_nails/" target="_blank"> <img src="public/insta_logo.png" alt="Instagram logo" /></a>
         <a href="https://www.facebook.com/konaktepenails/?locale=da_DK" target="_blank"> <img src="/public/fb_logo.png" alt="Facebook logo" /></a>
       </div>
+      <a class="btn" href="https://konaktepebeauty.onlinebooq.dk/" target="_blank">Book nu</a>
     </section>
   </article>
   <section class="logo">
@@ -46,8 +47,8 @@
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
-    padding: 0; /* padding styres af footer, ikke hver sektion */
-    text-align: center; /* skift til left hvis du vil venstrejustere */
+    padding: 0;
+    text-align: center;
     align-items: center;
   }
 
@@ -56,11 +57,40 @@
     gap: 1rem;
     align-items: center;
     justify-content: center;
+    margin-bottom: 1rem;
   }
 
   .some-logos img {
     height: 40px;
     width: auto;
+    transition:
+      transform 0.3s ease,
+      filter 0.3s ease;
+    cursor: pointer;
+  }
+  .some-logos img:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 8px rgba(244, 239, 233, 1)) drop-shadow(0 0 8px rgba(255, 255, 255, 0.5));
+  }
+  article .btn {
+    display: inline-block;
+    padding: 0.9rem 1.7rem;
+    background-color: transparent;
+    color: rgba(244, 239, 233, 1);
+    text-decoration: none;
+    border: 2px solid rgba(244, 239, 233, 1);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
+    transition:
+      transform 0.15s ease,
+      box-shadow 0.15s ease;
+  }
+  footer .btn:hover,
+  footer .btn:focus {
+    /* transform: translateY(-2px); */
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.22);
+    text-decoration: none;
+    background-color: rgba(244, 239, 233, 1);
+    color: rgba(57, 39, 29, 1);
   }
 
   .logo {
@@ -74,6 +104,14 @@
     max-width: 180px;
     width: 100%;
     height: auto;
+    transition:
+      transform 0.3s ease,
+      filter 0.3s ease;
+    cursor: pointer;
+  }
+  .logo img:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.8)) drop-shadow(0 0 8px rgba(255, 255, 255, 0.5));
   }
 
   /* Responsiv */

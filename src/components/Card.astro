@@ -14,10 +14,15 @@ const { data } = Astro.props;
     width: 100%;
     height: auto;
   }
+
   section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1rem;
+    transition: transform 0.3s ease;
+  }
+  section:hover {
+    transform: scale(1.03);
   }
   a {
     text-decoration: none;
