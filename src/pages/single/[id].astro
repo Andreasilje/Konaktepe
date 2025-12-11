@@ -124,6 +124,7 @@ const { post } = Astro.props;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+    margin-bottom: 3rem;
   }
 
   .related-item img {
@@ -131,6 +132,13 @@ const { post } = Astro.props;
     margin: 0 auto;
     display: block;
     border-radius: 6px;
+  }
+  .related-item img {
+    transition: transform 0.3s ease;
+  }
+  .related-item img:hover {
+    transform: scale(1.03);
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.1);
   }
 
   /* responsiv */

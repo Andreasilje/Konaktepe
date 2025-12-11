@@ -6,6 +6,7 @@ const { data } = Astro.props;
   <section>
     <img src=`https://yvsqeurljhxwfykzgfyb.supabase.co/storage/v1/object/public/konaktepe_images/${data.image}` alt="product image" />
     <h2>{data.productname}</h2>
+    <p>{data.price},-</p>
   </section>
 </a>
 
@@ -24,8 +25,21 @@ const { data } = Astro.props;
   section:hover {
     transform: scale(1.03);
   }
+  section img:hover {
+    box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.1);
+  }
   a {
     text-decoration: none;
     color: inherit;
+  }
+  h2 {
+    font-size: 1rem;
+    margin: 0;
+  }
+  p {
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 </style>
