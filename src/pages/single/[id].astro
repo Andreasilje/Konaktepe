@@ -2,8 +2,7 @@
 import Layout from "../../layouts/Layout.astro";
 
 export async function getStaticPaths() {
-  const endpoint =
-    "https://yvsqeurljhxwfykzgfyb.supabase.co/rest/v1/Konaktepe_nails?select=*";
+  const endpoint = "https://yvsqeurljhxwfykzgfyb.supabase.co/rest/v1/Konaktepe_nails?select=*";
   const key = `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inl2c3FldXJsamh4d2Z5a3pnZnliIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjI5Nzc0ODMsImV4cCI6MjA3ODU1MzQ4M30.tQHxzSel-Iqvcvuh9XBVKsvHr-oNSd8XLUyhsGABUGo`;
 
   const options = {
@@ -31,10 +30,7 @@ const { post } = Astro.props;
   <section class="product-detail">
     <div class="product-grid">
       <div class="product-img">
-        <img
-          src=`https://yvsqeurljhxwfykzgfyb.supabase.co/storage/v1/object/public/konaktepe_images/${post.image}`
-          alt="product image"
-        />
+        <img src=`https://yvsqeurljhxwfykzgfyb.supabase.co/storage/v1/object/public/konaktepe_images/${post.image}` alt="product image" />
       </div>
       <section class="product-content">
         <h1>{post.productname}</h1>
@@ -59,28 +55,13 @@ const { post } = Astro.props;
     <div class="related-wrapper">
       <div class="related-grid">
         <div class="related-item">
-          <a href="/listview"
-            ><img
-              src="../public/konaktepe_products_edited-10.webp"
-              alt="product 1 image"
-            /></a
-          >
+          <a href="/listview"><img src="../public/konaktepe_products_edited-10.webp" alt="product 1 image" /></a>
         </div>
         <div class="related-item">
-          <a href="/listview"
-            ><img
-              src="../public/konaktepe_products_edited-28.webp"
-              alt="product 2 image"
-            /></a
-          >
+          <a href="/listview"><img src="../public/konaktepe_products_edited-28.webp" alt="product 2 image" /></a>
         </div>
         <div class="related-item">
-          <a href="/listview"
-            ><img
-              src="../public/konaktepe_products_edited-31.webp"
-              alt="product 3 image"
-            /></a
-          >
+          <a href="/listview"><img src="../public/konaktepe_products_edited-31.webp" alt="product 3 image" /></a>
         </div>
       </div>
     </div>
@@ -170,7 +151,7 @@ const { post } = Astro.props;
     }
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 900px) {
     .product-detail {
       padding: 3rem 0;
     }
@@ -179,7 +160,7 @@ const { post } = Astro.props;
       gap: 1.5rem;
     }
   }
-  @media (max-width: 700px) {
+  @media (max-width: 900px) {
     .related-wrapper {
       flex-direction: column;
       gap: 1rem;
@@ -187,6 +168,7 @@ const { post } = Astro.props;
 
     /* HJÆÆLP HEEER */
     .product-img {
+      justify-self: center;
     }
     .product-img img {
       max-width: 70%;
